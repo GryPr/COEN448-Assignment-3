@@ -56,4 +56,12 @@ public class Quick3WayTest {
         assertArrayEquals(new Comparable[]{1, 2, 3, 4, 5}, array);
     }
 
+    // Test case with a random array of 20 elements
+    @Test
+    void testSortArrayRandom() {
+        Comparable[] array = {5, 4, 3, 2, 1, 1, 2, 3, 4, 5, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5};
+        Quick3Way.sort(array);
+        assertArrayEquals(new Comparable[]{1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5}, array);
+    }
+
 }
