@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class Quick3WayTest {
 
     // Write the same tests as QuickTest but for Quick3Way
-    // Test case for Quick3Way,sort with an empty array. It expects a comparable.
+    // Test case for Quick3Way,sort with an empty array.
     @Test
     void testSortEmptyArray() {
         Comparable[] array = new Comparable[0];
@@ -14,7 +14,7 @@ public class Quick3WayTest {
         assertEquals(0, array.length);
     }
 
-    // Test case for Quick3Way,sort with an array of size 1. It expects a comparable.
+    // Test case for Quick3Way,sort with an array of size 1.
     @Test
     void testSortArraySize1() {
         Comparable[] array = new Comparable[1];
@@ -24,7 +24,7 @@ public class Quick3WayTest {
         assertEquals(1, array[0]);
     }
 
-    // Test case for Quick3Way.sort with an array containing repeated elements. Use array equals
+    // Test case for Quick3Way.sort with an array containing repeated elements.
     @Test
     void testSortArrayRepeatedElements() {
         Comparable[] array = {1, 1, 1, 1, 1};

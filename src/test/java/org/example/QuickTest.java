@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class QuickTest {
 
-    // Test case for Quick,sort with an empty array. It expects a comparable.
+    // Test case for Quick,sort with an empty array.
     @Test
     void testSortEmptyArray() {
         Comparable[] array = new Comparable[0];
@@ -14,7 +14,7 @@ class QuickTest {
         assertEquals(0, array.length);
     }
 
-    // Test case for Quick,sort with an array of size 1. It expects a comparable.
+    // Test case for Quick,sort with an array of size 1.
     @Test
     void testSortArraySize1() {
         Comparable[] array = new Comparable[1];
@@ -24,7 +24,7 @@ class QuickTest {
         assertEquals(1, array[0]);
     }
 
-    // Test case for Quick.sort with an array containing repeated elements. Use array equals
+    // Test case for Quick.sort with an array containing repeated elements.
     @Test
     void testSortArrayRepeatedElements() {
         Comparable[] array = {1, 1, 1, 1, 1};
