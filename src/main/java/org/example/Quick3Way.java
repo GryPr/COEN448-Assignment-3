@@ -1,7 +1,5 @@
 package org.example;
 
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
 /******************************************************************************
@@ -38,10 +36,10 @@ import edu.princeton.cs.algs4.StdRandom;
  *  @author Robert Sedgewick
  *  @author Kevin Wayne
  */
-public class Quick3way {
+public class Quick3Way {
 
     // This class should not be instantiated.
-    private Quick3way() { }
+    private Quick3Way() { }
 
     /**
      * Rearranges the array in ascending order, using the natural order.
@@ -102,27 +100,6 @@ public class Quick3way {
         for (int i = lo + 1; i <= hi; i++)
             if (less(a[i], a[i-1])) return false;
         return true;
-    }
-
-
-
-    // print array to standard output
-    private static void show(Comparable[] a) {
-        for (int i = 0; i < a.length; i++) {
-            StdOut.println(a[i]);
-        }
-    }
-
-    /**
-     * Reads in a sequence of strings from standard input; 3-way
-     * quicksorts them; and prints them to standard output in ascending order. 
-     *
-     * @param args the command-line arguments
-     */
-    public static void main1(String[] args) {
-        String[] a = StdIn.readAllStrings();
-        Quick3way.sort(a);
-        show(a);
     }
 
 }

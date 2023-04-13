@@ -98,31 +98,6 @@ public class Quick {
         return j;
     }
 
-    /**
-     * Rearranges the array so that {@code a[k]} contains the kth smallest key;
-     * {@code a[0]} through {@code a[k-1]} are less than (or equal to) {@code a[k]}; and
-     * {@code a[k+1]} through {@code a[n-1]} are greater than (or equal to) {@code a[k]}.
-     *
-     * @param  a the array
-     * @param  k the rank of the key
-     * @return the key of rank {@code k}
-     * @throws IllegalArgumentException unless {@code 0 <= k < a.length}
-     */
-    public static Comparable select(Comparable[] a, int k) {
-        if (k < 0 || k >= a.length) {
-            throw new IllegalArgumentException("index is not between 0 and " + a.length + ": " + k);
-        }
-        StdRandom.shuffle(a);
-        int lo = 0, hi = a.length - 1;
-        while (hi > lo) {
-            int i = partition(a, lo, hi);
-            if      (i > k) hi = i - 1;
-            else if (i < k) lo = i + 1;
-            else return a[i];
-        }
-        return a[lo];
-    }
-
 
 
    /***************************************************************************
@@ -154,39 +129,6 @@ public class Quick {
         for (int i = lo + 1; i <= hi; i++)
             if (less(a[i], a[i-1])) return false;
         return true;
-    }
-
-
-    // print array to standard output
-    private static void show(Comparable[] a) {
-        for (int i = 0; i < a.length; i++) {
-            StdOut.println(a[i]);
-        }
-    }
-
-    /**
-     * Reads in a sequence of strings from standard input; quicksorts them; 
-     * and prints them to standard output in ascending order. 
-     * Shuffles the array and then prints the strings again to
-     * standard output, but this time, using the select method.
-     *
-     * @param args the command-line arguments
-     */
-    public static void main(String[] args) {
-        String[] a = StdIn.readAllStrings();
-        Quick.sort(a);
-        show(a);
-        assert isSorted(a);
-
-        // shuffle
-        StdRandom.shuffle(a);
-
-        // display results again using select
-        StdOut.println();
-        for (int i = 0; i < a.length; i++) {
-            String ith = (String) Quick.select(a, i);
-            StdOut.println(ith);
-        }
     }
 
 }

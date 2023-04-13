@@ -1,34 +1,34 @@
 package org.example;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-class QuickTest {
+public class Quick3WayTest {
 
-    // Test case for Quick,sort with an empty array. It expects a comparable.
+    // Write the same tests as QuickTest but for Quick3Way
+    // Test case for Quick3Way,sort with an empty array. It expects a comparable.
     @Test
     void testSortEmptyArray() {
         Comparable[] array = new Comparable[0];
-        Quick.sort(array);
+        Quick3Way.sort(array);
         assertEquals(0, array.length);
     }
 
-    // Test case for Quick,sort with an array of size 1. It expects a comparable.
+    // Test case for Quick3Way,sort with an array of size 1. It expects a comparable.
     @Test
     void testSortArraySize1() {
         Comparable[] array = new Comparable[1];
         array[0] = 1;
-        Quick.sort(array);
+        Quick3Way.sort(array);
         assertEquals(1, array.length);
         assertEquals(1, array[0]);
     }
 
-    // Test case for Quick.sort with an array containing repeated elements. Use array equals
+    // Test case for Quick3Way.sort with an array containing repeated elements. Use array equals
     @Test
     void testSortArrayRepeatedElements() {
         Comparable[] array = {1, 1, 1, 1, 1};
-        Quick.sort(array);
+        Quick3Way.sort(array);
         assertArrayEquals(new Comparable[]{1, 1, 1, 1, 1}, array);
     }
 
@@ -36,7 +36,7 @@ class QuickTest {
     @Test
     void testSortArrayEqualAndUnequalElements() {
         Comparable[] array = {1, 1, 1, 1, 1, 2, 2, 2, 2, 2};
-        Quick.sort(array);
+        Quick3Way.sort(array);
         assertArrayEquals(new Comparable[]{1, 1, 1, 1, 1, 2, 2, 2, 2, 2}, array);
     }
 
@@ -44,7 +44,7 @@ class QuickTest {
     @Test
     void testSortArraySorted() {
         Comparable[] array = {1, 2, 3, 4, 5};
-        Quick.sort(array);
+        Quick3Way.sort(array);
         assertArrayEquals(new Comparable[]{1, 2, 3, 4, 5}, array);
     }
 
@@ -52,7 +52,7 @@ class QuickTest {
     @Test
     void testSortArrayReverseSorted() {
         Comparable[] array = {5, 4, 3, 2, 1};
-        Quick.sort(array);
+        Quick3Way.sort(array);
         assertArrayEquals(new Comparable[]{1, 2, 3, 4, 5}, array);
     }
 
